@@ -1,0 +1,206 @@
+/* Style kesluruhan */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Style body */
+body {
+  display: block;
+}
+
+/* Style section */
+section {
+  height: 300vh;
+  background: url(img/bg1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  display: block;
+  unicode-bidi: isolate;
+}
+
+/* Style layer */
+.layer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 10%;
+}
+
+.layer h1 {
+  line-height: 1;
+  font-size: 11em;
+  font-weight: 900;
+  background-image: url(img/bg1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-background-clip: text; /* Prefix untuk kompatibilitas lebih baik */
+  background-clip: text;
+  color: transparent;
+  border: #111;
+}
+
+.layer h2 {
+  font-weight: 200;
+  font-size: 1.5em;
+  /* color: white; */
+}
+
+.layer h2,
+h1 {
+  text-transform: uppercase;
+}
+
+section.projects {
+  height: 200vh;
+  padding: 10%;
+  color: white;
+  background: url(img/bg3.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  position: relative;
+  border-radius: 20px;
+  padding: 3%;
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  background-color: #ffffff90;
+}
+
+.wrapper .card {
+  color: #111;
+  padding: 20px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.wrapper .card img {
+  width: 100%;
+  transition: 0.3s;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(0.9);
+}
+
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+
+.contact {
+  padding: 10%;
+  height: 70vh;
+  background: url(img/bg2.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+:focus-visible {
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+/* Media Queries untuk Responsivitas */
+
+/* Tablet */
+@media (max-width: 768px) {
+  .layer {
+    padding: 0 5%;
+  }
+
+  .layer h1 {
+    font-size: 8em;
+  }
+
+  .layer h2 {
+    font-size: 1.5em;
+  }
+
+  section.projects {
+    height: 320vh;
+    padding: 5%;
+    margin-bottom: 50px; /* Menambah jarak antara section 2 dan section 3 */
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    margin-top: 75px;
+    padding: 5%;
+    height: auto;
+  }
+}
+
+/* Ponsel */
+@media (max-width: 480px) {
+  .layer {
+    padding: 0 2%;
+  }
+
+  .layer h1 {
+    font-size: 5em;
+  }
+
+  .layer h2 {
+    font-size: 1.2em;
+  }
+
+  .projects {
+    height: 320vh;
+    padding: 2%;
+    margin-bottom: 50px; /* Menambah jarak antara section 2 dan section 3 */
+  }
+
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact {
+    height: auto;
+    margin-top: 75px;
+    padding: 2%;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Rianda Faturrahman</title>
+
+    <!-- Connect CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <style id="custom-cursor" type="text/css">
+      body button,
+      body [type='button'],
+      body input[type='reset'],
+      body input[type='submit'],
+      body [role='button'],
+      ::-webkit-search-cancel-button,
+      ::-webkit-search-decoration,
+      ::-webkit-scrollbar-button,
+      ::-webkit-file-upload-button,
+      [role^='button'],
+      .cc_pointer,
+      [type='search']::-webkit-search-cancel-button,
+      a,
+      select,
+      [type='search']::-webkit-search-decoration,
+      .paper-button,
+      .ytp-progress-bar-container,
+      input[type='submit'],
+      :link,
+      :visited,
+      a > *,
+      img,
+      ::-webkit-scrollbar-button,
+      .ogdlpmhglpejoiomcodnpjnfgcpmgale_pointer,
+      ::-webkit-file-upload-button,
+      .ytp-volume-panel,
+      #myogdlpmhglpejoiomcodnpjnfgcpmgale .icon,
+      body .custom-cursor-on-hover {
+        cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAi1JREFUWEfdl89PE0EUx99ruyRey637g5akNZ4U1AMheIAC/stE8ELEi4lGPBhKusvMELm0N5UA3Udms29ddX817jTBOTXd+fF533m/BqHi6LreTwRo6ulEdBUo6VVcWjgNq27Sc9xbQGxFAADfAik6VdcWzSsFYMvH4kJb39CbTafT8MWztVkdSpQCsOVjcZEYMplM4OXaeqkStm0PlhrNL7yQAE4DKZ6nFTEK0Ot0HkOz9TU5kOizr+RT4wCO49gWNvz+YEAHh2+W+MDz0Sjc2xnOCOhtIOVr/b8RBWIA1e/34eDoMDF4dHYG+8Nd7cVHvhLD/wCAiBDxLifMLOMKlOUB4wDtdhs+fPoIHJa248DxyTtQUsGrzU14WABd1/uOAFacameBFI/076JEVKsCPde7gRgAiO58JSMY4wBseTrXA0C46q3M4srXQkRMp+Iy58v7npkH2PI/D1j1Vn7bZ+EAfDqDGAPout4PJLLGUuhSG5Xb9DAOwIflXUXWfXLc1xoFZUqkQYwAzKPEgwWI+oHtnZAQdD+wn1mOq/jCvAr8iv8KHVHKF3QTmtmwGAVIfCFuw7PifzEArncNRM2xFH8pMS9AcveAp4ES6//clFatBUV3z3uUN6UFSpSB1AKQ9on28nJLd0B5gzsh7owWDnCpLsOtjY3Qdhw6fn9i1Q7Aj9NcCYhGvpIDfhck8zJeRJV9IJWio6gouncCPA+UeBIBAAY8lzK8n7/dAyvr3j/2vpL/AAAAAElFTkSuQmCC')
+            12 0,
+          pointer !important;
+      }
+      html,
+      body,
+      body select,
+      body .custom-cursor-default-hover {
+        cursor: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAABFtJREFUWEfFl89PImcYx9+ZEUUnoESkmphC1BsHbcC0aprag6K2MXFP/AHsiTTYsIk/YhQPu0piuWy0JlXjxdh4qbSmatIa16zZmMiiJbGJygCuP3CAIoyjgjDTvBPGsNZuEdBygUxm5vm83+f7fN8XBAAQycnJ+T0Wi7WB/+GDAACuBQLBtkwmGygtLXXYbLaDx+TgAAAAGAAAkcvlTz0ez8SjAyiVSrSzsxNZW1t7tbCwsGcwGDpNJtPFY4BwCmg0GnRpaQnR6XTs5OQk0tXVJTGbzaFHB7i4uGCj0SioqKgIMQyzHQqFvnxoCKhAVKPRYFABAAADvdDe3g4ikcjuxsaGvri4eJ8giAczJt+C9wDgqm02G6NWqzGRSPSMoqjvHkoJDqClpQVdXFy8UQAW83q97OzsLGq3219Zrda3dXV1z5eXl//KNsi/KpBoB2Y0GuMWiwVraGiQr6+vZ70VvAe4KQAAsEkrhH7AgsEgEw6H0ebm5nfhcNjl9XqzakxYNJIwIawNAXgQ+BtNKIG2tbWxFEW9Oz8/f4IgCGm324+z0Y7/bAEAIJ5ISsbpdIKqqioUx/EhmqZ7swXAj+EHFYDqBINBdnx8HN3d3V2fm5t7XVBQ8NLv959kAnIvBRKF0KGhoXhvby+Wm5tbHY1G/8gUACqQbMI7PZDwAqyFkiTJnJycoDqdbtfj8Xh9Pl/axrw9BVwSJlbETUGyB3gF+Gutra3MwcFBUKVSfSoWi8Ojo6OB+6qRVguSoQKBACKVSoFMJvueJEl9OgApjWFiRN8bTXiNpmkwODiIBAKBNzMzM9ZIJPIjAOAwVZCMFeBbNjY2BvR6PXzf5wCA1/cBSHkMj46O2I6ODhRBEOgP+M0lJ8uyyOnpKevxeCDAF+kA/GMK4vE4TD40Pz+fycvLg4nIOp1OFgYRhmGXAoEgciu6IQsSi8W+jsVib+6jQPJueBPFm5ubbG1tLToyMsIYjUYukgmCAJWVlahQKHxxdXXVl2qRD91352Y0PT0NSJIkLRbLL1qtVq1UKmu0Wi1zeXkJ+vr6UL/f/+vKysrPOI7/dHx87M8E5E4TSiQScH19/ZamabVIJBqhKMrodrsZuVzOBZHZbI53d3djOI7X0DS9nSnATRJaLBYWbss+n+/J2dmZ1+12byQAvnW5XKxCoeDGcHh4mOnp6YGb0ic0TWccxddNTU3o/Pw8YjAYIlNTU/H+/v5yk8l0BldWWFg4RFHUNzs7O0KogFAo5HwxMDCAKhSKzyYmJhz19fWX6arA/zGBJkPKy8ufHh4eTt71MpFIRMhkso/39/dvzgg1NTWAIAg/RVGytAGkUulsIkyQsrKyHxwOx293vUwsFhMlJSU8AHdGqK6uZtxudyAcDn+UNkCqD4rFYhdUYG9vDyqQDOB/FACVSvVVUVGRQiKRvOSPaT6f71koFHJubW1ZU13I7fv4rTel5xsbG6tWV1f/5AFwHFdnOoZ/A8/dVT/OfamUAAAAAElFTkSuQmCC')
+            0 0,
+          auto !important;
+      }
+    </style>
+
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  </head>
+
+  <body>
+    <!-- Layer Start -->
+    <section>
+    <div class="layer" style="left: 632.667px">
+      <h2>Hello Everyone<br />i'am Rianda Faturrahman</h2>
+      <h1>frontend <br />developer</h1>
+    </div>
+    </section>
+    <!-- Layer End -->
+
+    <!-- Projects Start -->
+    <section class="projects">
+      <h1>My Projects</h1>
+      <div class="wrapper">
+        <a class="card" href="#">
+          <img src="img/1.png" alt=""  />
+          <p>Project Travellin.id</p>
+        </a>
+        <a class="card" href="#">
+          <img src="img/4.png" alt="" />
+          <p>Project Web Wedding Invitation</p>
+        </a>
+        <a class="card" href="#">
+          <img src="img/2.png" alt="" />
+          <p>Project EFFO APPS</p>
+        </a>
+        <a class="card" href="#">
+          <img src="img/3.png" alt="" />
+          <p>Project SIMA Digital</p>
+        </a>
+        <a class="card" href="#">
+          <img src="img/5.png" alt="" />
+          <p>Project Web KopitiamKohRian</p>
+        </a>
+        <a class="card" href="#">
+          <img src="img/6.png" alt="" />
+          <p>Project Web Real Estate | Griya Rianda Nganjuk</p>
+        </a>
+      </div>
+    </section>
+    <!-- Projects End -->
+    
+
+    <!-- Contact Start -->
+    <section class="contact">
+      <h1>Contact Us</h1>
+      <div class="wrapper">
+        <div>
+          <h2>Hello Everyone, I'am Rianda Faturrahman</h2>
+          <br />
+          <p>I am currently studying Informatics Engineering at Jember State Polytechnic, Campus Three in Nganjuk Regency. I have just finished studying in the second semester, and starting next month I will enter the third semester.</p>
+          <br />
+          <p>I am very interested in learning frontend developer, I hope that after my college period is finished I can enter the field of frontend developer</p>
+          <br />
+          <p>in the frontend what makes me interested is being able to design a feature that will have direct contact with the user, I'm happy because I can express my creativity there</p>
+        </div>
+        <div class="mapouter">
+          <div class="gmap_canvas">
+            <iframe
+              class="gmap_iframe"
+              frameborder="0"
+              scrolling="no"
+              marginheight="0"
+              marginwidth="0"
+              src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7909.0479568463315!2d111.897265106913!3d-7.62665824966395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sid!2sid!4v1721264978111!5m2!1sid!2sid"
+              width="600"
+              height="450"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact End -->
+
+   <!-- Footer start -->
+   <footer style="background-color: #2d7191; color: white; text-align: center; padding: 30px;">
+    <p>Created by <i class="bi bi-linkedin text-danger"></i>  <a href="https://www.linkedin.com/in/rianda-faturrahman-8ab66328b/" style="color: white;" class="text-white fw-bold">Rianda Faturrahman</a></p>
+    </footer>
+    <!-- Footer end -->
+
+    <!-- Connect Javascript -->
+    <script src="javascript.js"></script>
+   
+  </body>
+</html>
